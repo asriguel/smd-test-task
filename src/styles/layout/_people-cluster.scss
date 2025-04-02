@@ -1,0 +1,41 @@
+.people-cluster {
+  &__inner {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem; // 80px
+    height: 5rem; // 80px
+    background: $button-gradient;
+    clip-path: path('M0 20C0 8.954 8.954 0 20 0s20 8.954 20 20c0 11.046-8.954 20-20 20S0 31.046 0 20z');
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    &__inner {
+      max-width: 18.75rem; // 300px
+    }
+
+    &__heart {
+      width: 3.125rem; // 50px
+      height: 3.125rem; // 50px
+    }
+  }
+} 

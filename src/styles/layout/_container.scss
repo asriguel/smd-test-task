@@ -1,0 +1,24 @@
+.container {
+  max-width: $container-max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 $spacing-md;
+  }
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+  align-items: center;
+  padding: $spacing-xl 0;
+  
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: $spacing-lg;
+  }
+} 

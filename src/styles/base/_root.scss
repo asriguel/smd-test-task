@@ -1,0 +1,34 @@
+:root {
+  // Colors
+  --color-primary-red: #{$primary-red};
+  --color-primary-pink: #{$primary-pink};
+  --color-text-dark: #{$text-dark};
+  --color-white: #{$white};
+
+  // Gradients
+  --gradient-text: #{$text-gradient};
+  --gradient-button: #{$button-gradient};
+
+  // Spacing
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+
+  // Typography
+  --font-family-base: #{$font-family-base};
+  --font-size-base: #{$font-size-base};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-2xl: #{$font-size-2xl};
+  --font-size-3xl: #{$font-size-3xl};
+
+  @media (max-width: $breakpoint-mobile) {
+    --font-size-base: 0.875rem; // 14px
+    --font-size-lg: 1rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+  }
+} 

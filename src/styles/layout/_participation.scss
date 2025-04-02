@@ -1,0 +1,48 @@
+.participation {
+  &__inner {
+    max-width: 483px;
+    margin: 0 auto;
+  }
+
+  .steps {
+    list-style: none;
+    counter-reset: step;
+    
+    li {
+      margin-bottom: $spacing-md;
+      font-size: $font-size-2xl;
+      display: flex;
+      font-weight: 600;
+      align-items: center;
+      line-height: 1.8;
+      gap: $spacing-sm;
+      
+      &::before {
+        content: counter(step) ".";
+        counter-increment: step;
+        font-weight: 800;
+        line-height: 1;
+        font-size: 3.4375rem;
+        @include text-gradient;
+      }
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .steps li {
+      font-size: $font-size-base;
+      
+      &::before {
+        font-size: $font-size-lg;
+      }
+    }
+  }
+} 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Participate - Dating Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-content">
+        <section class="people-cluster">
+            <div class="people-cluster__inner">
+                <picture class="people-cluster__image">
+                    <source
+                        media="(min-width: 768px)"
+                        srcset="./assets/people-cluster@2x.webp 2x,
+                                ./assets/people-cluster.webp 1x"
+                    >
+                    <source
+                        media="(max-width: 767px)"
+                        srcset="./assets/people-cluster@05x.webp"
+                    >
+                    <img 
+                        src="./assets/people-cluster.webp"
+                        alt="Community members arranged in a circle"
+                        loading="eager"
+                    >
+                </picture>
+            </div>
+        </section>
+
+        <section class="participation">
+          <div class="participation__inner">
+            <h1>How to Participate</h1>
+            <ol class="steps" role="list">
+              <li>Subscribe to our News</li>
+              <li>
+                <button type="button" class="button js-modal-trigger">Sign up</button>
+              </li>
+              <li>Check your email inbox</li>
+              <li>Wait till September 22</li>
+            </ol>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal__overlay js-modal-close"></div>
+      <div class="modal__container">
+        <button type="button" class="modal__close js-modal-close" aria-label="Close modal">
+          <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="closeGrad" x1="0%" y1="12.35%" x2="83.63%" y2="100%">
+                <stop offset="0%" stop-color="var(--color-primary-red)" />
+                <stop offset="100%" stop-color="var(--color-primary-pink)" />
+              </linearGradient>
+            </defs>
+            <g stroke="url(#closeGrad)" stroke-width="4">
+              <line x1="4" y1="4" x2="24" y2="24" />
+              <line x1="24" y1="4" x2="4" y2="24" />
+            </g>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <h3>To register, enter the mail to which our news is sent <br /> and set your password</h3>
+          <form class="form js-form" method="put" novalidate>
+            <div class="form__field">
+              <input 
+                type="email" 
+                class="form__input js-email-input"
+                name="email" 
+                placeholder="Example@email.com" 
+                required
+                aria-describedby="email-error"
+              >
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.4756 0.5C4.95559 0.5 0.475586 4.98 0.475586 10.5C0.475586 16.02 4.95559 20.5 10.4756 20.5C15.9956 20.5 20.4756 16.02 20.4756 10.5C20.4756 4.98 15.9956 0.5 10.4756 0.5ZM11.4756 15.5H9.47559V13.5H11.4756V15.5ZM11.4756 11.5H9.47559V5.5H11.4756V11.5Z" fill="#FF0000"/>
+              </svg>
+              <span class="form__error js-email-error" aria-live="polite"></span>
+            </div>
+            <div class="form__field">
+              <input 
+                type="password" 
+                class="form__input js-password-input"
+                name="password" 
+                placeholder="Password" 
+                required
+                minlength="8"
+                aria-describedby="password-error"
+              >
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.4756 0.5C4.95559 0.5 0.475586 4.98 0.475586 10.5C0.475586 16.02 4.95559 20.5 10.4756 20.5C15.9956 20.5 20.4756 16.02 20.4756 10.5C20.4756 4.98 15.9956 0.5 10.4756 0.5ZM11.4756 15.5H9.47559V13.5H11.4756V15.5ZM11.4756 11.5H9.47559V5.5H11.4756V11.5Z" fill="#FF0000"/>
+              </svg>
+              <span class="form__error js-password-error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="button button--primary modal__button letter-spacing--md js-submit-button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Template -->
+    <template id="registration-form-template">
+      <h3>To register, enter the mail to which our news is sent <br /> and set your password</h3>
+      <form class="form js-form" method="put" novalidate>
+        <div class="form__field">
+          <input 
+            type="email" 
+            class="form__input js-email-input"
+            name="email" 
+            placeholder="Example@email.com" 
+            required
+            aria-describedby="email-error"
+          >
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.4756 0.5C4.95559 0.5 0.475586 4.98 0.475586 10.5C0.475586 16.02 4.95559 20.5 10.4756 20.5C15.9956 20.5 20.4756 16.02 20.4756 10.5C20.4756 4.98 15.9956 0.5 10.4756 0.5ZM11.4756 15.5H9.47559V13.5H11.4756V15.5ZM11.4756 11.5H9.47559V5.5H11.4756V11.5Z" fill="#FF0000"/>
+          </svg>
+          <span class="form__error js-email-error" aria-live="polite"></span>
+        </div>
+        <div class="form__field">
+          <input 
+            type="password" 
+            class="form__input js-password-input"
+            name="password" 
+            placeholder="Password" 
+            required
+            minlength="8"
+            aria-describedby="password-error"
+          >
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.4756 0.5C4.95559 0.5 0.475586 4.98 0.475586 10.5C0.475586 16.02 4.95559 20.5 10.4756 20.5C15.9956 20.5 20.4756 16.02 20.4756 10.5C20.4756 4.98 15.9956 0.5 10.4756 0.5ZM11.4756 15.5H9.47559V13.5H11.4756V15.5ZM11.4756 11.5H9.47559V5.5H11.4756V11.5Z" fill="#FF0000"/>
+          </svg>
+          <span class="form__error js-password-error" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="button modal__button letter-spacing--md js-submit-button">Submit</button>
+      </form>
+    </template>
+
+    <!-- Thank You Template -->
+    <template id="thank-you-template">
+      <h2 class="modal__title modal__title--success">Thank You</h2>
+      <p class="modal__text">To complete registration, please check your e-mail</p>
+    </template>
+
+    <script type="module" src="./scripts/main.ts"></script>
+  </body>
+</html> 
