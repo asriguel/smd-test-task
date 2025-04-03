@@ -4,6 +4,7 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
+  base: '/smd-test-task/',
   root: 'src',
   plugins: [
     ViteImageOptimizer({
@@ -49,5 +50,6 @@ export default defineConfig({
       external: ['fsevents'],
     },
     chunkSizeWarningLimit: 1000,
+    sourcemap: true,
   },
 }); 
